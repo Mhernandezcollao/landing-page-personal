@@ -2,32 +2,62 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+:root{
+    color: white;
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    background-color: black;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.triangle-to-left {
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+}
+
+.triangle-to-right {
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+}
+
+.container-gradient {
+  width: 100%;
+  height: 30px; /* Altura del div */
+  background: linear-gradient(to bottom, transparent, black);
+}
+
+/* Contenedor del parallax */
+.parallax-container {
+  position: relative;
+  height: 80vh; /* Tamaño completo de la ventana */
+  width: 100%;
+  overflow: hidden;
+  background: #f0f0f0; /* Fondo de color de respaldo */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Estilos de fondo de parallax */
+.parallax-container {
+  /* background-image: url('https://i.imgur.com/ZNFQbWg.png'); */
+  /* background-image: url('https://i.imgur.com/e3X7bvx.png'); */
+  /* background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://i.imgur.com/nqnF2FN.jpg"); */
+  background-image: url('https://i.imgur.com/nqnF2FN.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+
+}
+
+.drop-shadow {
+  filter: drop-shadow(1px 1px 20px green)
 }

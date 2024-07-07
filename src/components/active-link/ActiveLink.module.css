@@ -1,0 +1,7 @@
+.link {
+    @apply ml-3 text-sm font-semibold rounded-sm text-white text-end  hover:text-myGreen
+}
+
+.activeLink {
+    @apply text-myGreen 
+}
