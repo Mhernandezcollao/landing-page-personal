@@ -6,7 +6,6 @@ import { Container } from './container/Container';
 import { Title } from './title/Title';
 import { AbountMe } from './about-me/AbountMe';
 import { Contact } from './contact/Contact';
-import { ContainerLearning } from './container-learning/ContainerLearning';
 import { ContainerTypeLearning } from './container-type-learning/ContainerTypeLearning';
 import { ContainerCV } from './container-cv/ContainerCV';
 import { ActiveLink } from './active-link/ActiveLink';
@@ -27,7 +26,6 @@ export {
     Title,
     AbountMe,
     Contact,
-    ContainerLearning,
     ContainerTypeLearning,
     ContainerCV,
     ContainerRight,

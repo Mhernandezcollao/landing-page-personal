@@ -9,22 +9,24 @@ interface Props {
 
 export const ContainerTypeLearning = ({title, learning}: Props) => {
     return (
-        <div className='h-auto w-full my-3 max-w-[175px] justify-self-center media465:border-[1px] media465:p-2 media465:border-gray-500 media465:rounded-md sm:border-none sm:p-0'>
-            <p className='text-sm mb-7 text-center underline uppercase'>{title}</p>
-            {
-            learning.map((item: Learning) => (
-                <div className='flex items-center my-2' key={item.id}>
-                <Image
-                    src={item.img}
-                    alt={item.name}
-                    width={14}
-                    height={14}
-                    className="mr-3 object-cover"
-                />
-                <p className='text-xs truncate cursor-default'>{item.name}</p>
-                </div>
-            ))
-            }
+        <div className='w-full mt-8'>
+            <p className='text-sm mb-5 text-start underline uppercase'>{title}</p>
+            <div className="flex justify-start w-full flex-wrap">
+                {
+                    learning.map((item:Learning) => (
+                        <div className="flex items-center border-[1px] border-myGreen px-3 py-[2px] rounded-2xl m-1">
+                            <Image
+                                src={item.img}
+                                alt={item.name}
+                                width={10}
+                                height={10}
+                                className="object-cover w-[15px] h-[15px] mr-2"
+                            />
+                            <p className='text-[10px] truncate cursor-default'>{item.name}</p>
+                        </div>
+                    ))
+                }
+            </div>
         </div>
     )
 }
