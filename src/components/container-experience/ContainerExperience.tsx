@@ -22,12 +22,12 @@ export const ContainerExperience = ({exprerience}: Props) => {
                         <div className="h-1/5 w-1 animations-time-line" style={{backgroundColor: `${item.color}`}}></div>
                         </div>
                     </div>
-                    <div className="flex flex-col w-full ml-2 mb-8">
+                    <div className="flex flex-col pl-2 mb-8" style={{width: "calc(100% - 30px)"}}>
                         <p className="text-lg leading-[18px] font-bold uppercase mb-1" style={{color: `${item.color}`}}>{item.title}</p>
                         <p className="text-xs text-white font-semibold mb-2">{item.range_date}</p>
                         <div>
-                            <Image src={item.img} width={100} height={100} alt="" className="w-[42px] h-[42px] float-left" />
-                            <p className="text-[14px] text-gray-200">{item.description}</p>
+                            <Image src={item.img} width={100} height={100} alt="" className="w-[38px] h-[38px] float-left mr-2" />
+                            <p className="text-[14px] text-gray-200 text-justify">{item.description}</p>
                         </div>
                     </div>
                     </div>
