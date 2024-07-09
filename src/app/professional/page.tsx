@@ -2,8 +2,6 @@ import { faSuitcase, faUserGraduate, faUserTie } from "@fortawesome/free-solid-s
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Container, ContainerCV, ContainerExperience, ContainerFinalIcon, ContainerLeft, ContainerRight, ContainerStartIcon, ContainerTypeLearning, PhotoName } from "@/components";
 import { Metadata } from "next";
-import Image from 'next/image'
-import { Learning } from "@/interfaces";
 
 
 export const metadata: Metadata = {
@@ -69,13 +67,12 @@ export default function ProfessionalPage() {
     <>
       <Container>
         <ContainerCV>
-          {/* <div className="flex flex-col items-center w-full sm:w-2/6 sm:bg-[#151515] mr-5 p-10 media465:px-0 media465:m-0 sm:mr-10"> */}
-          <div className="flex flex-col items-center w-full sm:w-2/6 sm:bg-[#151515] sm:mr-5 py-10 sm:px-5">
-            <Image src="https://i.imgur.com/1eSEJIv.jpg" alt="Maryorie Hernandez" height={500} width={500} className="w-[140px] object-cover rounded-full border-2 border-white" />
-            <div className="w-full mt-5">
-              <p className="text-2xl text-center leading-none mt-[5px] truncate">Maryorie Belén</p>
-              <p className="leading-none text-center truncate">Hernández Collao</p>
-            </div>
+          <ContainerRight>
+            <PhotoName 
+              img="https://i.imgur.com/1eSEJIv.jpg"
+              name="Maryorie Belén" 
+              surnames="Hernández Collao" 
+            />
             <ContainerTypeLearning 
                 title="Herramientas" 
                 learning={tools}
@@ -88,22 +85,7 @@ export default function ProfessionalPage() {
                 title="Tecnologías " 
                 learning={technologies}
             />
-          </div>
-          {/* <ContainerRight>
-            <PhotoName 
-              img="https://i.imgur.com/1eSEJIv.jpg"
-              name="Maryorie Belén" 
-              surnames="Hernández Collao" 
-            />
-              <ContainerTypeLearning 
-                title="Herramientas" 
-                learning={tools}
-              />
-              <ContainerTypeLearning 
-                title="Lenguajes" 
-                learning={languages}
-              />
-          </ContainerRight> */}
+          </ContainerRight>
           <ContainerLeft>
             <ContainerStartIcon 
               icon={<FontAwesomeIcon icon={faUserGraduate} className='text-white' style={{fontSize: '16px'}}/>} 

@@ -14,7 +14,7 @@ export const ContainerTypeLearning = ({title, learning}: Props) => {
             <div className="flex justify-start w-full flex-wrap">
                 {
                     learning.map((item:Learning) => (
-                        <div className="flex items-center border-[1px] border-myGreen px-3 py-[2px] rounded-2xl m-1">
+                        <div key={item.id} className="flex items-center border-[1px] border-myGreen px-3 py-[2px] rounded-2xl m-1">
                             <Image
                                 src={item.img}
                                 alt={item.name}
