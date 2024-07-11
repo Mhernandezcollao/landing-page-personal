@@ -1,7 +1,6 @@
 import { ButtonMenu } from './button-menu/ButtonMenu';
 import { Navbar } from './navbar/Navbar';
 import { Footer } from './footer/Footer';
-import { Banner } from './banner/Banner';
 import { Container } from './container/Container';
 import { Title } from './title/Title';
 import { AbountMe } from './about-me/AbountMe';
@@ -15,13 +14,13 @@ import { ContainerLeft } from './container-left/ContainerLeft';
 import { ContainerStartIcon } from './container-start-icon/ContainerStartIcon';
 import { ContainerFinalIcon } from './container-final-icon/ContainerFinalIcon';
 import { ContainerExperience } from './container-experience/ContainerExperience';
+import { BannerCuston } from './banner-custon/BannerCuston';
 
 export {
     Navbar,
     ActiveLink,
     ButtonMenu,
     Footer,
-    Banner,
     Container,
     Title,
     AbountMe,
@@ -34,4 +33,5 @@ export {
     ContainerStartIcon,
     ContainerFinalIcon,
     ContainerExperience,
+    BannerCuston
 }

@@ -8,7 +8,7 @@ interface Props {
     social_network: SocialNetwork[]
 }
 
-export const Banner = ({social_network}: Props) => {
+export const BannerCuston = ({social_network}: Props) => {
     return (
         <div className='w-full'>
             <div className="parallax-container">

@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react";
-import { AbountMe, Banner, Contact, Container, Title } from "@/components";
+import { AbountMe, BannerCuston, Contact, Container, Title } from "@/components";
 import { SocialNetwork } from "@/interfaces/SocialNetwork";
 import { faFacebookSquare, faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
@@ -53,7 +53,7 @@ export default function Home() {
 
   return (
     <>
-      <Banner social_network={socialNetworks}/>
+      <BannerCuston social_network={socialNetworks}/>
       <Container>
         <Title text="Acerca de mí"/>
         <AbountMe 
