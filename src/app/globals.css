@@ -38,7 +38,7 @@ main {
 /* Contenedor del parallax */
 .parallax-container {
   position: relative;
-  height: 80vh; /* Tamaño completo de la ventana */
+  height: 550px; /* Tamaño completo de la ventana */
   width: 100%;
   overflow: hidden;
   background: #f0f0f0; /* Fondo de color de respaldo */

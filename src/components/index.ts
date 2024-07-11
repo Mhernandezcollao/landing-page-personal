@@ -1,7 +1,7 @@
 import { ButtonMenu } from './button-menu/ButtonMenu';
 import { Navbar } from './navbar/Navbar';
 import { Footer } from './footer/Footer';
-import { Banner } from './Banner/Banner';
+import { Banner } from './banner/Banner';
 import { Container } from './container/Container';
 import { Title } from './title/Title';
 import { AbountMe } from './about-me/AbountMe';
