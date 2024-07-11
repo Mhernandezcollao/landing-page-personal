@@ -35,6 +35,7 @@ main {
   background: linear-gradient(to bottom, transparent, black);
 }
 
+
 /* Contenedor del parallax */
 .parallax-container {
   position: relative;
