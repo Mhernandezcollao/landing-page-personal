@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from "next/image";
-import styles from './bonner.module.css'
+import styles from './bonner-custon.module.css'
 import { SocialNetwork } from '@/interfaces/SocialNetwork';
 import Link from 'next/link';
 
