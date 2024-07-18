@@ -84,9 +84,7 @@ export const Navbar = () => {
             <div className="flex flex-col p-5 items-center">
               {
                 menuItems.map((item: MenuItem) => (
-                  <div className="w-auto">
                     <ActiveLink key={item.id} {...item} onClick={() => setIsOpen(false)}/>
-                  </div>
                 ))
               }
             </div>
