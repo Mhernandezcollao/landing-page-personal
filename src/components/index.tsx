@@ -15,6 +15,9 @@ import { ContainerStartIcon } from './container-start-icon/ContainerStartIcon';
 import { ContainerFinalIcon } from './container-final-icon/ContainerFinalIcon';
 import { ContainerExperience } from './container-experience/ContainerExperience';
 import { BannerCuston } from './banner-custon/BannerCuston';
+import { ContainerContent } from './container-content/ContainerContent';
+import { BannerContent } from './banner-content/BannerContent';
+import { ContainerSportsFeatures } from './container-sports-features/ContainerSportsFeatures';
 
 export {
     Navbar,
@@ -33,5 +36,8 @@ export {
     ContainerStartIcon,
     ContainerFinalIcon,
     ContainerExperience,
-    BannerCuston
+    BannerCuston,
+    ContainerContent,
+    BannerContent,
+    ContainerSportsFeatures
 }

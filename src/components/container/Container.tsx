@@ -3,7 +3,6 @@ import React from 'react'
 interface Props {
     id?: string
     children: any
-
 }
 
 export const Container = ({id, children}: Props) => {

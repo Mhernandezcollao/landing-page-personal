@@ -6,7 +6,7 @@ interface Props {
 
 export const ContainerCV = ({children}: Props) => {
   return (
-    <div className="flex flex-col sm:flex-row w-full mt-[20px]">
+    <div className="flex flex-col lg:flex-row w-full mt-[20px]">
         {children}
     </div>
   )

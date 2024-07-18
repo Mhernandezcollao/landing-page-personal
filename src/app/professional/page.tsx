@@ -21,7 +21,7 @@ const university = [
 ]
 const professional = [
   {
-    id: "2",
+    id: "1",
     title: "Universidad Andrés Bello",
     range_date: "Marzo 2022 - Junio 2022",
     description: "Trabajé como soporte de TI en la Universidad Andrés Bello, responsabilizándome de los laboratorios de computadoras situados en República, Santiago. Dentro de mis responsabilidades estaba la reparación de computadoras en mal estado e instalación de los programas necesarios para los alumnos a lo largo del año.",
@@ -29,7 +29,7 @@ const professional = [
     color: "#F9A312",
   },
   {
-    id: "3",
+    id: "2",
     title: "Acegroups",
     range_date: "Junio 2022 - Junio 2024",
     description: "Trabajé como desarrolladora front-end, creé y mantuve componentes reutilizables para interfaces web y móviles. Utilicé tecnologías como React, Next.js y Angular para aplicaciones web, y React Native con Expo para aplicaciones móviles nativas. Integré APIs y servicios externos, colaboré en el diseño de usuario y me enfoqué en optimizar el rendimiento y la experiencia del usuario en todos los proyectos.",
@@ -72,6 +72,7 @@ export default function ProfessionalPage() {
               img="https://i.imgur.com/1eSEJIv.jpg"
               name="Maryorie Belén" 
               surnames="Hernández Collao" 
+              condition={true}
             />
             <ContainerTypeLearning 
                 title="Herramientas" 
@@ -111,6 +112,5 @@ export default function ProfessionalPage() {
         </ContainerCV>
       </Container>
     </>
-
   );
 }

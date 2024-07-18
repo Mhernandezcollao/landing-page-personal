@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react";
-import { AbountMe, BannerCuston, Contact, Container, Title } from "@/components";
+import { AbountMe, BannerContent, BannerCuston, Contact, Container, ContainerContent, Title } from "@/components";
 import { SocialNetwork } from "@/interfaces/SocialNetwork";
 import { faFacebookSquare, faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
@@ -53,36 +53,44 @@ export default function Home() {
 
   return (
     <>
-      <BannerCuston social_network={socialNetworks}/>
-      <Container>
-        <Title text="Acerca de mí"/>
-        <AbountMe 
-          date_of_birth="20 de Marzo de 1990"
-          nationality="Chilena"
-          about_me="Soy una apasionada de dos mundos muy diferentes pero igualmente fascinantes: el fútbol ️⚽️ y la programación 🤓.Encuentro e
-            el fútbol no solo un deporte, sino una forma de expresión y competencia que me motiva día a día. En el ámbito de 
-            la programación, me enfoco principalmente en el desarrollo front-end, donde disfruto creando interfaces intuitivas y 
-            atractivas. Me encanta aprender nuevas tecnologías y aplicarlas en proyectos creativos. Además, valoro enormemente el trabajo 
-            en equipo, donde puedo compartir conocimientos y colaborar para alcanzar metas comunes. Esta combinación única de pasiones 
-            me impulsa a buscar constantemente nuevos desafíos y oportunidades para crecer tanto en el campo como en el ámbito digital."
-        />
-      </Container>
-      <Container>
-        <Title text="Contacto"/>
-        <Contact 
-          email="mhernandezcollao@gmail.com" 
-          social_network={socialNetworks}
-          valueName={name}
-          onChangeName={(event:any) => setName(event.target.value)}
-          valueEmail={email}
-          onChangeEmail={(event:any) => setEmail(event.target.value)}
-          valueAffair={affair}
-          onChangeAffair={(event:any) => setAffair(event.target.value)}
-          valueMessage={message}
-          onChangeMessage={(event:any) => setMessage(event.target.value)}
-          onClick={handleButton}
-        />
-      </Container>
+      <BannerCuston/>
+      <BannerContent 
+        text1="Hola a todos 👋, me pueden decir" 
+        text2="May Hernández" 
+        text3="Pero en realidad, mi nombre es Maryorie Belén Hernández Collao. Soy ingeniera en informática y también futbolista profesional. Te invito a conocer un poco más sobre mí." 
+        social_networks={socialNetworks}
+      />
+      <ContainerContent>
+        <Container>
+          <Title text="Acerca de mí"/>
+          <AbountMe 
+            date_of_birth="20 de Marzo de 1990"
+            nationality="Chilena"
+            about_me="Soy una apasionada de dos mundos muy diferentes pero igualmente fascinantes: el fútbol ️⚽️ y la programación 🤓.Encuentro e
+              el fútbol no solo un deporte, sino una forma de expresión y competencia que me motiva día a día. En el ámbito de 
+              la programación, me enfoco principalmente en el desarrollo front-end, donde disfruto creando interfaces intuitivas y 
+              atractivas. Me encanta aprender nuevas tecnologías y aplicarlas en proyectos creativos. Además, valoro enormemente el trabajo 
+              en equipo, donde puedo compartir conocimientos y colaborar para alcanzar metas comunes. Esta combinación única de pasiones 
+              me impulsa a buscar constantemente nuevos desafíos y oportunidades para crecer tanto en el campo como en el ámbito digital."
+          />
+        </Container>
+        <Container>
+          <Title text="Contacto"/>
+          <Contact 
+            email="mhernandezcollao@gmail.com" 
+            social_network={socialNetworks}
+            valueName={name}
+            onChangeName={(event:any) => setName(event.target.value)}
+            valueEmail={email}
+            onChangeEmail={(event:any) => setEmail(event.target.value)}
+            valueAffair={affair}
+            onChangeAffair={(event:any) => setAffair(event.target.value)}
+            valueMessage={message}
+            onChangeMessage={(event:any) => setMessage(event.target.value)}
+            onClick={handleButton}
+          />
+        </Container>
+      </ContainerContent>
     </>
   );
 }
