@@ -7,7 +7,6 @@ import { AbountMe } from './about-me/AbountMe';
 import { Contact } from './contact/Contact';
 import { ContainerTypeLearning } from './container-type-learning/ContainerTypeLearning';
 import { ContainerCV } from './container-cv/ContainerCV';
-import { ActiveLink } from './active-link/ActiveLink';
 import { ContainerRight } from './container-right/ContainerRight';
 import { PhotoName } from './photo-name/PhotoName';
 import { ContainerLeft } from './container-left/ContainerLeft';
@@ -21,7 +20,6 @@ import { ContainerSportsFeatures } from './container-sports-features/ContainerSp
 
 export {
     Navbar,
-    ActiveLink,
     ButtonMenu,
     Footer,
     Container,

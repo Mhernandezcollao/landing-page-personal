@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUserCircle } from "@fortawesome/free-regular-svg-icons";
 import { ButtonMenu } from "../button-menu/ButtonMenu";
 import { usePathname } from "next/navigation";
-import { ActiveLink } from "..";
+import styles from './navbar.module.css'
 
 
 const menuItems: MenuItem[] = [
@@ -57,6 +57,7 @@ export const Navbar = () => {
 
   return (
     <>
+
       <nav className="flex justify-center w-full h-[60px] backdrop-blur-sm bg-colorNavbar fixed top-0 left-0 right-0 z-50">
         <div className="flex justify-between items-center w-full max-w-6xl px-5">
           <Link className={`flex items-center ${pathName === "/" && "text-myGreen"}`} href='/'>
@@ -72,25 +73,31 @@ export const Navbar = () => {
           <div className="hidden md:flex">
             {
               menuItems.map((item: MenuItem) => (
-                <ActiveLink key={item.id} {...item}/>
+                <Link key={item.id} className={`${styles.link} ${(pathName === item.path) && styles.activeLink}`} href={item.path}>
+                  {item.text}
+                </Link>
               ))
             }
           </div>
         </div>
       </nav>
-      {
-        isOpen && (
-          <div className="fixed w-screen backdrop-blur-sm bg-colorNavbar z-50 mt-[59px]" style={{height: "calc(100vh - 59px)"}}>
-            <div className="flex flex-col p-5 items-center">
-              {
-                menuItems.map((item: MenuItem) => (
-                    <ActiveLink key={item.id} {...item} onClick={() => setIsOpen(false)}/>
-                ))
-              }
-            </div>
-          </div>
-        )
-      }
+
+      <div className={`${styles.resizable} ${isOpen ? styles.expanded : ''}`} onClick={handleChange}>
+        <div className="flex flex-col p-5 items-center pt-[60px]">
+          {
+            menuItems.map((item: MenuItem) => (
+                <Link  
+                  key={item.id} 
+                  className={`${styles.linkXS} ${(pathName === item.path) && styles.activeLinkXS}`} 
+                  href={item.path} 
+                  onClick={() => setIsOpen(false)}
+                >
+                  {item.text}
+                </Link>
+            ))
+          }
+        </div>
+      </div>
     </>
   )
 }
