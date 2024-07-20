@@ -13,7 +13,7 @@ interface Props {
 export const BannerContent = ({text1, text2, text3, social_networks}: Props) => {
   return (
     <>
-        <div className="absolute w-full h-4/5 pt-[60px]">
+        <div className="absolute w-full h-4/5 pt-[60px] z-10">
             <div className="flex h-full w-full justify-center">
               <div className="flex items-center h-full w-full max-w-6xl px-5">
                 <div className="flex flex-col justify-center items-center lg:items-start w-full lg:w-1/2 h-full">
@@ -36,7 +36,7 @@ export const BannerContent = ({text1, text2, text3, social_networks}: Props) => 
               </div>
             </div>
         </div>
-        <div className="relative w-full z-10">
+        <div className="relative w-full z-20">
               <div className="absolute -top-[20px] container-gradient"></div>
         </div>
     </>

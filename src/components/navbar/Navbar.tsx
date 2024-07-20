@@ -57,7 +57,6 @@ export const Navbar = () => {
 
   return (
     <>
-
       <nav className="flex justify-center w-full h-[60px] backdrop-blur-sm bg-colorNavbar fixed top-0 left-0 right-0 z-50">
         <div className="flex justify-between items-center w-full max-w-6xl px-5">
           <Link className={`flex items-center ${pathName === "/" && "text-myGreen"}`} href='/'>
