@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUserCircle } from "@fortawesome/free-regular-svg-icons";
 import { ButtonMenu } from "../button-menu/ButtonMenu";
 import { usePathname } from "next/navigation";
-import styles from './navbar.module.css'
+import styles from './Navbar.module.css'
 
 
 const menuItems: MenuItem[] = [
