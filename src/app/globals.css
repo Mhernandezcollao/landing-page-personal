@@ -36,8 +36,6 @@ main {
   background: linear-gradient(to bottom, transparent, black);
 }
 
-
-
 .grow{
   transition: 500ms ease;
   margin-right: 8px;
@@ -50,8 +48,6 @@ main {
   transform: scale(1.2);
   transition: 500ms ease;
 }
-
-
 
 /* Contenedor del parallax */
 /* .parallax-container {
@@ -71,10 +67,6 @@ main {
   background-position: center bottom;
 
 } */
-
-
-
-
 
 
 .drop-shadow {

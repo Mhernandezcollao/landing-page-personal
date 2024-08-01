@@ -51,8 +51,6 @@ export const Navbar = () => {
 
   const handleChange = () => {
       setIsOpen(prev => !prev);
-      console.log(!isOpen ? 'Abierto' : 'Cerrado')
-      console.log(!isOpen)
   };
 
   return (
@@ -81,7 +79,7 @@ export const Navbar = () => {
         </div>
       </nav>
 
-      <div className={`${styles.resizable} ${isOpen ? styles.expanded : ''}`} onClick={handleChange}>
+      <div className={`${styles.resizable} ${isOpen && styles.expanded}`} onClick={handleChange}>
         <div className="flex flex-col p-5 items-center pt-[60px]">
           {
             menuItems.map((item: MenuItem) => (
@@ -89,7 +87,7 @@ export const Navbar = () => {
                   key={item.id} 
                   className={`${styles.linkXS} ${(pathName === item.path) && styles.activeLinkXS}`} 
                   href={item.path} 
-                  onClick={() => setIsOpen(false)}
+                  onClick={() => setIsOpen(true)}
                 >
                   {item.text}
                 </Link>

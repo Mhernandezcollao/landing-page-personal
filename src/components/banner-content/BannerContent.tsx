@@ -5,7 +5,7 @@ import { SocialNetwork } from '@/interfaces';
 
 interface Props {
     text1: string,
-    text2: string,
+    text2: string | undefined,
     text3: string,
     social_networks: SocialNetwork[]
 }

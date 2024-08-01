@@ -1,13 +1,7 @@
 import { faSuitcase, faUserGraduate, faUserTie } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Container, ContainerCV, ContainerExperience, ContainerFinalIcon, ContainerLeft, ContainerRight, ContainerStartIcon, ContainerTypeLearning, PhotoName } from "@/components";
-import { Metadata } from "next";
 
-
-export const metadata: Metadata = {
-    title: "About page",
-    description: "Description about page",
-};
 
 const university = [
   {

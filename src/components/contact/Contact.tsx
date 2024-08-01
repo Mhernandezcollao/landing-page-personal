@@ -6,7 +6,7 @@ import Link from 'next/link'
 import React from 'react'
 
 interface Props {
-    email: string,
+    email: string | undefined,
     social_network: SocialNetwork[],
     valueEmail: any,
     onChangeEmail: any,

@@ -2,7 +2,7 @@ import React from 'react'
 
 interface Props {
     icon: any
-    color: any
+    color: string
     title: string
 }
 

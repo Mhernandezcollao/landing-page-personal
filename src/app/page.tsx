@@ -1,48 +1,25 @@
 "use client"
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { AbountMe, BannerContent, BannerCuston, Contact, Container, ContainerContent, Title } from "@/components";
-import { SocialNetwork } from "@/interfaces/SocialNetwork";
-import { faFacebookSquare, faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
+import { useSocialNetwork } from "./hook/useSocialNetworks";
+import { useUser } from "./hook/useUser";
 
-const socialNetworks: SocialNetwork[] = [
-  {
-    id: "1",
-    name: "Instagram",
-    src: "https://i.imgur.com/WYEmPJz.png",
-    href: "https://www.instagram.com/mhernandezcollao/?hl=es-la",
-    icon: faInstagram
-  },
-  {
-    id: "2",
-    name: "Facebook",
-    src: "https://i.imgur.com/090Z4DP.png",
-    href: "https://www.facebook.com/LaMay1990?locale=es_LA",
-    icon: faFacebookSquare
-  },
-  {
-    id: "3",
-    name: "Gmail",
-    src: "https://i.imgur.com/aznln4x.png",
-    href: "mailto:mhernandezcollao@gmail.com",
-    icon: faEnvelope
-  },
-  {
-    id: "4",
-    name: "Linkeding",
-    src: "https://i.imgur.com/GRqOs9D.png",
-    href: "https://cl.linkedin.com/in/maryorie-hernandez-collao-749479205",
-    icon: faLinkedin
-  },
-]
 
 export default function Home() {
 
+  const {socialNetworks, loadSocialNetworks} = useSocialNetwork();
+  const {user, loadUser} = useUser();
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
   const [affair, setAffair] = useState("")
   const [message, setMessage] = useState("")
+
+  useEffect(() => {
+    loadSocialNetworks();
+    loadUser();
+  }, [])
+  
 
   const handleButton = () => {
     console.log("Nombre", name)
@@ -56,7 +33,7 @@ export default function Home() {
       <BannerCuston/>
       <BannerContent 
         text1="Hola a todos 👋, me pueden decir" 
-        text2="May Hernández" 
+        text2={user?.nickname} 
         text3="Pero en realidad, mi nombre es Maryorie Belén Hernández Collao. Soy ingeniera en informática y también futbolista profesional. Te invito a conocer un poco más sobre mí." 
         social_networks={socialNetworks}
       />
@@ -64,8 +41,8 @@ export default function Home() {
         <Container>
           <Title text="Acerca de mí"/>
           <AbountMe 
-            date_of_birth="20 de Marzo de 1990"
-            nationality="Chilena"
+            date_of_birth={user?.dateOfBirth}
+            nationality={user?.nationality}
             about_me="Soy una apasionada de dos mundos muy diferentes pero igualmente fascinantes: el fútbol ️⚽️ y la programación 🤓.Encuentro e
               el fútbol no solo un deporte, sino una forma de expresión y competencia que me motiva día a día. En el ámbito de 
               la programación, me enfoco principalmente en el desarrollo front-end, donde disfruto creando interfaces intuitivas y 
@@ -77,7 +54,7 @@ export default function Home() {
         <Container>
           <Title text="Contacto"/>
           <Contact 
-            email="mhernandezcollao@gmail.com" 
+            email={user?.email}
             social_network={socialNetworks}
             valueName={name}
             onChangeName={(event:any) => setName(event.target.value)}

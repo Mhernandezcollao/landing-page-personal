@@ -3,8 +3,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
 
 interface Props {
-    date_of_birth: string,
-    nationality: string,
+    date_of_birth: string | undefined,
+    nationality: string | undefined,
     about_me: string
 }
 
