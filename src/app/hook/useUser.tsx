@@ -19,7 +19,7 @@ export const useUser = () => {
                     dateOfBirth: "20 de Marzo de 1990",
                     nationality: "Chilena",
                     email: "mhernandezcollao@gmail.com",
-                    imgBanner: "https://i.imgur.com/Zg2ASf0.png"
+                    github: "https://github.com/Mhernandezcollao"
                 }
                 setUser(resp);
                 setLoadingUser(false);

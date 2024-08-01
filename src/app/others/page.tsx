@@ -7,10 +7,10 @@ import { useExperiences } from '../hook/useExperiences';
 import { useEffect } from 'react';
 
 export default function SportsPage() {
-    const {otherExperiences, loadOtherExperences} = useExperiences()
+    const {otherExperiences, loadOtherExperiences} = useExperiences()
 
     useEffect(() => {
-        loadOtherExperences();
+        loadOtherExperiences();
     }, [])
     
     return (

@@ -5,5 +5,5 @@ export interface User {
     dateOfBirth: string,
     nationality: string,
     email: string,
-    imgBanner: any
+    github: string,
 }

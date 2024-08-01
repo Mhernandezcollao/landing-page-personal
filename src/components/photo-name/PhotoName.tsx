@@ -4,12 +4,13 @@ import Link from 'next/link'
 
 interface Props {
     img: string,
-    name: string,
-    surnames: string,
+    name: any,
+    surnames: any,
+    github: any
     condition: boolean
 }
 
-export const PhotoName = ({img, name, surnames, condition}: Props) => {
+export const PhotoName = ({img, name, surnames, github, condition}: Props) => {
     return (
         <div className='flex flex-col sm:flex-row lg:flex-col items-center mb-7'>
             <Image src={img} alt="Maryorie Hernandez" height={500} width={500} className="w-[140px] h-[140px] object-cover rounded-full border-2 border-white" />
@@ -20,7 +21,7 @@ export const PhotoName = ({img, name, surnames, condition}: Props) => {
                     condition && (
                         <p className="flex justify-center items-center text-center sm:text-start lg:text-center text-[12px] truncate mt-1">
                             Visita mi perfil de: 
-                            <Link href="https://github.com/Mhernandezcollao" target="_blank" className='ml-2 hover:cursor-pointer'>
+                            <Link href={github || ""} target="_blank" className='ml-2 hover:cursor-pointer'>
                                 <div className="flex items-end border-[1px] border-myGreen px-3 py-[2px] rounded-2xl">
                                     <Image
                                         src="https://i.imgur.com/oPSIkYf.png"

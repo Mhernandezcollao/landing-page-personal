@@ -4,6 +4,7 @@ import { MenuItem } from "./MenuItem";
 import { Experience } from "./Experience";
 import { SportFeature } from './SportFeature';
 import { User } from "./User";
+import { SportingFeature } from "./SportingFeature";
 
 export type {
     MenuItem,
@@ -11,5 +12,6 @@ export type {
     Learning,
     Experience,
     SportFeature,
-    User
+    User,
+    SportingFeature
 }
