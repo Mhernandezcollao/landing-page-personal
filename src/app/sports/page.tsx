@@ -15,10 +15,13 @@ export default function SportsPage() {
     useEffect(() => {
         loadTeams();
         loadSelectionProcesses();
+    }, [loadTeams, loadSelectionProcesses])
+
+    useEffect(() => {
         loadSkillfulFoot();
         loadPlayingPositions();
         loadDistinctions();
-    }, [])
+    }, [loadSkillfulFoot, loadPlayingPositions, loadDistinctions])
     
     return (
         <Container>
@@ -27,7 +30,8 @@ export default function SportsPage() {
                     <PhotoName 
                         img="https://i.imgur.com/VKzIFwD.jpg"
                         name="Maryorie Belén" 
-                        surnames="Hernández Collao" 
+                        surnames="Hernández Collao"
+                        github="https://github.com/Mhernandezcollao"
                         condition={false}
                     />
                     <ContainerSportsFeatures 

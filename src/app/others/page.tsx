@@ -11,7 +11,7 @@ export default function SportsPage() {
 
     useEffect(() => {
         loadOtherExperiences();
-    }, [])
+    }, [loadOtherExperiences])
     
     return (
         <Container>

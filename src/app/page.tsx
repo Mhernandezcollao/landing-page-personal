@@ -8,17 +8,17 @@ import { useUser } from "./hook/useUser";
 
 export default function Home() {
 
-  const {socialNetworks, loadSocialNetworks} = useSocialNetwork();
   const {user, loadUser} = useUser();
+  const {socialNetworks, loadSocialNetworks} = useSocialNetwork();
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
   const [affair, setAffair] = useState("")
   const [message, setMessage] = useState("")
 
   useEffect(() => {
-    loadSocialNetworks();
     loadUser();
-  }, [])
+    loadSocialNetworks();
+  }, [loadUser, loadSocialNetworks])
   
 
   const handleButton = () => {

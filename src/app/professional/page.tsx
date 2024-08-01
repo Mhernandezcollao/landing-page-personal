@@ -10,18 +10,24 @@ import { useUser } from "../hook/useUser";
 
 
 export default function ProfessionalPage() {
+  const {user, loadUser} = useUser() 
   const {university, loadUniversity, professional, loadProfessional} = useExperiences()
   const {tools, loadTools, languages, loadLanguages, technologies, loadTechnologies} = useLearning()
-  const {user, loadUser} = useUser() 
 
   useEffect(() => {
     loadUser();
+  }, [loadUser])
+
+  useEffect(() => {
     loadUniversity();
     loadProfessional();
+  }, [loadUniversity, loadProfessional])
+
+  useEffect(() => {
     loadTools();
     loadLanguages();
     loadTechnologies();
-  }, [])
+  }, [loadTools, loadLanguages, loadTechnologies])
   
   return (
     <>
