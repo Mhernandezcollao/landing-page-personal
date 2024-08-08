@@ -18,7 +18,7 @@ export default function Home() {
   useEffect(() => {
     loadUser();
     loadSocialNetworks();
-  }, [loadUser, loadSocialNetworks])
+  }, [])
   
 
   const handleButton = () => {

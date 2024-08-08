@@ -15,13 +15,13 @@ export default function SportsPage() {
     useEffect(() => {
         loadTeams();
         loadSelectionProcesses();
-    }, [loadTeams, loadSelectionProcesses])
+    }, [])
 
     useEffect(() => {
         loadSkillfulFoot();
         loadPlayingPositions();
         loadDistinctions();
-    }, [loadSkillfulFoot, loadPlayingPositions, loadDistinctions])
+    }, [])
     
     return (
         <Container>

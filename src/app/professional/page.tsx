@@ -16,18 +16,18 @@ export default function ProfessionalPage() {
 
   useEffect(() => {
     loadUser();
-  }, [loadUser])
+  }, [])
 
   useEffect(() => {
     loadUniversity();
     loadProfessional();
-  }, [loadUniversity, loadProfessional])
+  }, [])
 
   useEffect(() => {
     loadTools();
     loadLanguages();
     loadTechnologies();
-  }, [loadTools, loadLanguages, loadTechnologies])
+  }, [])
   
   return (
     <>
